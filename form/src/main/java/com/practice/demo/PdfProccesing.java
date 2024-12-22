@@ -24,35 +24,11 @@ public class PdfProccesing {
             e.printStackTrace();
         }
 
-        String newFileDirectory =  directory + "/"+file.getOriginalFilename();
-        pdfDataExtract(newFileDirectory);
+        
       //  System.out.println("new file path is " + directory + "/"+file.getOriginalFilename());
     }
-    public static void pdfDataExtract(String newFileDirectory){
-         // Create a content handler
-        BodyContentHandler contenthandler = new BodyContentHandler();
- 
-        // Create a file in local directory
-        File f = new File(newFileDirectory);
- 
-        // Create a file input stream
-        // on specified path with the created file
-        FileInputStream fstream = new FileInputStream(f);
- 
-        // Create an object of type Metadata to use
-        Metadata data = new Metadata();
- 
-        // Create a context parser for the pdf document
-        ParseContext context = new ParseContext();
- 
-        // PDF document can be parsed using the PDFparser
-        // class
-        PDFParser pdfparser = new PDFParser();
- 
-        // Method parse invoked on PDFParser class
-        pdfparser.parse(fstream, contenthandler, data,
-                        context);
+   
     }
 
    
-}
+
